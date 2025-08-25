@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+.registro-container {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Lado izquierdo - Imagen con fondo púrpura */
+.character-section {
+   width: 34%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.character-section::before {
+   width: 34%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.character-img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+  border-top-right-radius: 200%;
+  border-bottom-right-radius: 200%;
+}
+
+/* Lado derecho - Formulario */
+.form-section {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: white;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 28rem;
+  margin-left: 4rem;
+}
+
+.form-header {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.form-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.registro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-label {
+  color: #374151;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.input-field {
+  height: 3rem;
+  padding: 0 1rem;
+  border: 2px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #7C3AED;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.input-field::placeholder {
+  color: #9ca3af;
+}
+
+/* Select específico */
+select.input-field {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #d1d5db;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  appearance: none;
+  background: white;
+  position: relative;
+}
+
+.checkbox:checked {
+  background-color: #7C3AED;
+  border-color: #7C3AED;
+}
+
+.checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.checkbox-label {
+  font-size: 0.875rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.login-link {
+  background: none;
+  border: none;
+  font-size: 0.875rem;
+  color: #7C3AED;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.login-link:hover {
+  color: #5B21B6;
+}
+
+.registro-button {
+  width: 100%;
+  height: 3rem;
+  background: linear-gradient(135deg, #7C3AED, #6366F1);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.2);
+}
+
+.registro-button:hover {
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.3);
+  transform: translateY(-1px);
+}
+
+.registro-button:active {
+  transform: translateY(0);
+}
+
+/* Divider */
+.divider {
+  position: relative;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.divider span {
+  background: white;
+  padding: 0 1rem;
+  color: #9ca3af;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Google Button */
+.google-button {
+  width: 100%;
+  height: 3rem;
+  background: white;
+  color: #374151;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.google-button:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.google-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .registro-container {
+    flex-direction: column;
+  }
+  
+  .character-section,
+  .form-section {
+    width: 100%;
+  }
+
+  .character-section {
+    min-height: 40vh;
+    position: relative;
+  }
+
+  .character-section::before {
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    right: 0;
+    bottom: -25%;
+  }
+
+  .form-section {
+    padding: 2rem 1rem;
+  }
+
+  .form-container {
+    margin-left: 0;
+    max-width: 24rem;
+  }
+
+  .form-header h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .character-section {
+    min-height: 30vh;
+  }
+
+  .form-section {
+    padding: 1rem;
+  }
+
+  .form-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .registro-form {
+    gap: 1rem;
+  }
+}
